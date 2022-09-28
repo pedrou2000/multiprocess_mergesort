@@ -76,7 +76,7 @@ The main technologies used were all the low level Operating System mechanisms le
 
 
 
-## 3. Learning outcomes
+## 3. Learning Outcomes
 
 [//]: # "What did you learn?" 
 The main learning outcomes were:
