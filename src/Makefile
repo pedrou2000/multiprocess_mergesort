@@ -81,10 +81,31 @@ runi: sorti
 	@sleep 1
 	@./sorti $(ARG_FILE) $(ARG_N_LEVELS) $(ARG_N_PROCESSES) $(ARG_DELAY)
 
+runi_small: sorti
+	@echo "Launching program (optional part)..."
+	@sleep 1
+	@./sorti ./Data/DataSmall.dat $(ARG_N_LEVELS) $(ARG_N_PROCESSES) $(ARG_DELAY)
+
+runi_medium: sorti
+	@echo "Launching program (optional part)..."
+	@sleep 1
+	@./sorti ./Data/DataMedium.dat $(ARG_N_LEVELS) $(ARG_N_PROCESSES) $(ARG_DELAY)
+
+runi_large: sorti
+	@echo "Launching program (optional part)..."
+	@sleep 1
+	@./sorti ./Data/DataLarge.dat $(ARG_N_LEVELS) $(ARG_N_PROCESSES) $(ARG_DELAY)
+
 runvi: sorti
 	@echo "Launching program (optional part) with valgrind..."
 	@sleep 1
 	@valgrind --leak-check=full --show-leak-kinds=all ./sorti $(ARG_FILE) $(ARG_N_LEVELS) $(ARG_N_PROCESSES) $(ARG_DELAY)
 
 gnu_small: gnu
+	@./gnu ./Data/DataSmall.dat results.txt 10 1 30 1
+
+gnu_medium: gnu
 	@./gnu ./Data/DataMedium.dat results.txt 10 1 30 1
+
+gnu_large: gnu
+	@./gnu ./Data/DataLarge.dat results.txt 10 1 30 1
