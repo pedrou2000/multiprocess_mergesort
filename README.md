@@ -21,15 +21,21 @@ The main motivation of this program was to apply all the concepts learned in the
 [//]: # "Building Procedure" 
 In order to carry out this project, we use an incremental approach. Starting from a monoprocessing ordering system, which has been modified using operating systems mechanims such as shared memory, message queue, signal and semaphores until the multiprocessing version is reached.
 
+### Algorithm Overview
+
+
 ### Project Structure
 The structure of the project is the following:
 - `Proyecto.pdf`: Report with all the results obtained and an explanation of the project.
 - `src`: A directory which contains all the source code for implementing the algorithm:
-  - `Data`: Files which contain the arrays to check the correct behavour of the algorithm.
+  - `Data`: Directory which contains the files which contain the arrays to check the correct behavour of the algorithm.
   - `Makefile`: A Makefile for the easy execution of the program. Instructions for its use will be given later.
   - `main.c`: The main program which will be executed. It the sort function defined in `sort.c`.
-  - `main_optional_part.c`: 
-
+  - `main_optional_part.c`: An improved version of the program which lets several processes work on different levels concurrently.
+  - `gnu_plot_generator.c`: Program which test the execution of the program using different number of workers saving the results into a file in order to later plot the results.
+  - `sort.c` and `sort.h`: The header file contains the definition of the data structures used by the algorithm for interprocess comunication, as well as a detailed explanation of the utility of each function in `sort.c`. `sort.c` is the main file of the projects, where the algorithm to sort the array is developed and all the operating systems resources are used to coordinate all the processes involved.
+  - `utils.c` and `utils.h`: General use functions are defined in these modules.
+  - `global.h`: Status and Bool types are defined here.
 
 
 
