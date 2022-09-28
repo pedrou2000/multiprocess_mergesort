@@ -22,6 +22,7 @@ The main motivation of this program was to apply all the concepts learned in the
 In order to carry out this project, we use an incremental approach. Starting from a monoprocessing ordering system, which has been modified using operating systems mechanims such as shared memory, message queue, signal and semaphores until the multiprocessing version is reached.
 
 ### Algorithm Overview
+  ![Selection_074](https://user-images.githubusercontent.com/46072805/192671599-48c65b59-7d8a-4886-8d8f-5a12507b647d.png)
 
 
 ### Project Structure
