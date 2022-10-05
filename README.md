@@ -1,4 +1,4 @@
-# Multithreaded Mergesort 
+# Concurrent Mergesort 
 
 ## 1. Description of the Project
 
